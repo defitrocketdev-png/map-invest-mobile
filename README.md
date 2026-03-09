@@ -1,39 +1,53 @@
-# Welcome to your Expo app 👋
+# DeFit Atlas App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Version:** 1.0.0
+
+This is an [Expo](https://expo.dev) project built with React Native and Expo Router for file-based routing. The project uses Expo's managed workflow with a [development build](https://docs.expo.dev/develop/development-builds/introduction/).
 
 ## Get started
 
 1. Install dependencies
 
    ```bash
-   npm install
+   yarn install
    ```
 
-2. Start the app
+2. Start the development server
 
    ```bash
-   npx expo start
+   yarn start
    ```
 
-In the output, you'll find options to open the app in a
+Open the app in your development client on:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Physical device with the dev client installed
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Development Build
 
-When you're ready, run:
+This project uses a custom development build (dev client) instead of Expo Go. To create a new development build:
 
 ```bash
-npm run reset-project
+# For iOS
+eas build --profile development --platform ios
+
+# For Android
+eas build --profile development --platform android
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Available Scripts
+
+- `yarn start` - Start the Expo development server
+- `yarn android` - Build and run on Android device/emulator (creates native build)
+- `yarn ios` - Build and run on iOS simulator (creates native build)
+- `yarn web` - Run in web browser
+- `yarn lint` - Run ESLint
+- `yarn reset-project` - Reset to a blank project
+
+**Note:** `yarn android` and `yarn ios` are used for building native projects when needed, but for day-to-day development with your existing dev client, just use `yarn start`.
 
 ## Learn more
 
