@@ -1,0 +1,45 @@
+{
+  "cli": {
+    "version": ">= 13.2.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "EAS_BUILD_PROFILE": "development"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview": {
+      "channel": "preview",
+      "env": {
+        "EAS_BUILD_PROFILE": "preview"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "env": {
+        "EAS_BUILD_PROFILE": "production"
+      }
+    },
+    "dapp-store": {
+      "channel": "production",
+      "env": {
+        "EAS_BUILD_PROFILE": "dapp-store"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
